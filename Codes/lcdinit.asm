@@ -1,0 +1,18 @@
+# ORG 2000H
+# BEGIN 2000H
+	Begin:        CALL LCD_INIT
+		HLT
+
+
+
+
+
+
+
+
+	LCD_INIT:   PUSH PSW
+		XRA A
+		MVI A , 0FH
+		LXI H , 80F0H
+		MOV M,A
+		RET   
